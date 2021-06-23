@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+
+
+<head>
+<title>Calculating Bill</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="background.css">
+
+<head>
+<body>
+<div class="container" id="myform">
+<h4 align="center" style="font-variant:small-caps">Calculating Hospital Charge </h4>
+<form action="reg.php" method="get">
+
+<div class="form-group row">
+		<label for="bid" class="col-sm-4 col-form-label" class="sr-only">Bill ID</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" required maxlength="4" autofocus id="bid" pattern="[0-9]{4}" name="billid"> 
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="pid" class="col-sm-4 col-form-label" class="sr-only">Select Patient ID</label>
+		<div class="col-sm-8">
+		<select name="patientid" class="form-control" id="pid">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="dc" class="col-sm-4 col-form-label" class="sr-only">Doctor Charge</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" required maxlength="8" autofocus id="dc" pattern="[0-9]{8}" name="doccharge"> 
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="rc" class="col-sm-4 col-form-label" class="sr-only">Room Charge</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" required maxlength="8" autofocus id="rc" pattern="[0-9]{8}" name="roomcharge"> 
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="tc" class="col-sm-4 col-form-label" class="sr-only">Testing Charge</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" required maxlength="8" autofocus id="tc" pattern="[0-9]{8}" name="testcharge"> 
+		</div>
+</div>
+<div class="form-group row">
+ <button type="submit" class="btn btn-primary mb-2">Calculate Bill</button>
+ </div>
+</form>
+</div>
+</body>
+</html>

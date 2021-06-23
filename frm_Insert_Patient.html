@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<title>Inserting Patient</title>
+
+
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+#myform{
+margin:50px;
+border-radius:5px;
+border:solid blue 2px;
+padding:25px;
+background: rgb(225,106,152);
+background: -moz-linear-gradient(90deg, rgba(225,106,152,1) 38%, rgba(0,212,255,1) 93%);
+background: -webkit-linear-gradient(90deg, rgba(225,106,152,1) 38%, rgba(0,212,255,1) 93%);
+background: linear-gradient(90deg, rgba(225,106,152,1) 38%, rgba(0,212,255,1) 93%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e16a98",endColorstr="#00d4ff",GradientType=1);
+}
+</style>
+<head>
+<body>
+<div class="container" id="myform">
+<h4 align="center" style="font-variant:small-caps">Registering Patient </h4>
+<form action="reg.php" method="get">
+
+<div class="form-group row">
+		<label for="pd" class="col-sm-4 col-form-label">Enter Patient ID</label>
+		<div class="col-sm-8">
+		<input class="form-control" type="text" id="pd" name="patientid" required maxlength="4"  pattern="[0-9]{4}" autofocus>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="fn" class="col-sm-4 col-form-label">Enter First Name</label>
+		<div class="col-sm-8">
+		<input class="form-control" type="text" id="fn" name="fname" required maxlength="15"  pattern="[a-zA-Z]+">
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="mn" class="col-sm-4 col-form-label">Enter Middle Name</label>
+		<div class="col-sm-8">
+		<input class="form-control" type="text" id="mn" name="mname"  maxlength="15"  pattern="[a-zA-Z]+">
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="ln" class="col-sm-4 col-form-label">Enter Last Name</label>
+		<div class="col-sm-8">
+		<input class="form-control" type="text" id="ln" name="lname"  maxlength="25"  pattern="[a-zA-Z]+" required>
+		</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-4">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+  <label class="form-check-label" for="male">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+  <label class="form-check-label" for="female">Female</label>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="age">Enter Age</label>
+  <input class="form-check-input" type="number" name="age" id="age" min="0">
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="unit" id="m" value="m" checked>
+  <label class="form-check-label" for="m">Month</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="unit" id="y" value="y">
+  <label class="form-check-label" for="y">Year</label>
+</div>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-4">
+
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="ad1">Address1</label>
+  <input  type="text" name="address1" id="ad1" required class="form-control">
+</div>
+</div>
+<div class="col-sm-4">
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="ad2">Address2</label>
+  <input  type="text" name="address2" id="ad2" class="form-control">
+</div>
+</div>
+<div class="col-sm-4">
+<div class="form-check form-check-inline">
+  <label class="form-check-label" for="c">City</label>
+  <input  type="text" name="city" id="c" required class="form-control">
+</div>
+</div>
+</div>
+
+<div class="form-group row">
+<label for="ln" class="col-sm-4 col-form-label">Write about Disease</label>
+<div class="col-sm-8">
+	<textarea class="form-control" name="Disease" rows="4"  cols="75" required></textarea>
+</div>
+</div>
+
+<div class="form-group row">
+<label for="did" class="col-sm-4 col-form-label">Choose Doctor ID</label>
+<div class="col-sm-8">
+	<select name="doctorid" class="form-control" id="did" required>
+		<option>001</option>
+		<option>002</option>
+		<option>003</option>
+	</select>
+</div>
+</div>
+<div class="form-group row">
+ <button type="submit" class="btn btn-primary mb-2">Register Patient</button>
+ </div>
+</form>
+</div>
+</body>
+</html>

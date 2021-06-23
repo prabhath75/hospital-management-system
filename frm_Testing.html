@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+
+
+<head>
+<title>Registering Tests</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="background.css">
+
+<head>
+<body>
+<div class="container" id="myform">
+<h4 align="center" style="font-variant:small-caps">Registering Tests</h4>
+<form action="reg.php" method="get">
+
+<div class="form-group row">
+		<label for="tid" class="col-sm-4 col-form-label" class="sr-only">Enter Test ID</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" name="testid" required maxlength="4" pattern="[0-9]{4}" id="tid" autofocus>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="des" class="col-sm-4 col-form-label" class="sr-only">Description</label>
+		<div class="col-sm-8">
+		<textarea name="testdes" required rows="4" class="form-control" id="des" ></textarea>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="tc" class="col-sm-4 col-form-label" class="sr-only">Test Charge</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" name="testcharge" required maxlength="6" pattern="[0-9]{6}" id="tc">
+		</div>
+</div>
+
+<div class="form-group row">
+ <button type="submit" class="btn btn-primary mb-2">Register Test</button>
+ </div>
+</form>
+</div>
+</body>
+</html>

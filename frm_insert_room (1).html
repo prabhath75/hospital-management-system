@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+
+
+<head>
+<title>Registering Room</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="background.css">
+
+<head>
+<body>
+<div class="container" id="myform">
+<h4 align="center" style="font-variant:small-caps">Registering Room</h4>
+<form action="reg.php" method="get">
+
+<div class="form-group row">
+		<label for="rid" class="col-sm-4 col-form-label" class="sr-only">Enter room ID</label>
+		<div class="col-sm-8">
+		<input type="text" class="form-control" name="roomid" required maxlength="4" pattern="[0-9]{4}" id="rid" autofocus>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="rt" class="col-sm-4 col-form-label" class="sr-only">Select Type</label>
+		<div class="col-sm-8">
+		<select name="roomtype" class="form-control" id="rt" requird >
+			<option>Luxury</option>
+			<option>Comfortable</option>
+			<option>Economical</option>
+		</select>
+		</div>
+</div>
+
+<div class="form-group row">
+		<label for="rc" class="col-sm-4 col-form-label" class="sr-only">Per Day Charge</label>
+		<div class="col-sm-8">
+		<select name="roomcharge" class="form-control" id="rc" requird>
+			<option>10000</option>
+			<option>80000</option>
+			<option>50000</option>
+		</select>
+		</div>
+</div>
+<div class="form-group row">
+		<label for="rf" class="col-sm-4 col-form-label" class="sr-only">Room Facility</label>
+		<div class="col-sm-8">
+		<textarea name="roomfaci" class="form-control" required id="rf" rows="4"></textarea>
+		</div>
+</div>
+
+<div class="form-group row">
+ <button type="submit" class="btn btn-primary mb-2">Register Room</button>
+ </div>
+</form>
+</div>
+</body>
+</html>
